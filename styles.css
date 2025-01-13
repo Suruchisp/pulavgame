@@ -1,0 +1,67 @@
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Center the game container */
+#game-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 800px;
+}
+
+/* Title text style */
+.game-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    background-color: #FF8C00;
+    color: white;
+    font-size: 24px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #e07b00;
+    transform: scale(1.1);
+}
+
+.button:active {
+    background-color: #cc6600;
+    transform: scale(1);
+}
+
+/* Add some space between the content */
+.content-container {
+    text-align: center;
+}
+
+/* Optional: Add a background image for the body */
+body {
+    background-image: url('assets/kitchen-background.jpg'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

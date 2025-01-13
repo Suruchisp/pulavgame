@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Making Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <style>
+        /* Basic reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  /* Set background to black */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Center the game container with a fixed size and kitchen background */
+        #game-container {
+            width: 800px; /* Set a specific width */
+            height: 600px; /* Set a specific height */
+            position: relative;
+            background-image: url('assets/kitchen-background.jpg'); /* Set kitchen background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block; /* To remove any potential whitespace below the canvas */
+        }
+
+        /* Title text style */
+        .game-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 3D floating button styling */
+        .button {
+            display: inline-block;
+            background-color: #FF8C00;
+            color: white;
+            font-size: 24px;
+            padding: 15px 35px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 12px;
+            cursor: pointer;
+            text-shadow: 0px 0px 15px rgba(255, 140, 0, 0.9), 0px 0px 20px rgba(255, 140, 0, 0.8); /* Glowing effect */
+            box-shadow: 0px 10px 20px rgba(255, 140, 0, 0.6); /* Floating shadow effect */
+            transform: translateY(0px); /* Initial position */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #e07b00;
+            box-shadow: 0px 20px 40px rgba(255, 140, 0, 0.8); /* Larger floating shadow */
+            transform: translateY(-10px); /* Button floats up on hover */
+            text-shadow: 0px 0px 25px rgba(255, 140, 0, 1), 0px 0px 30px rgba(255, 140, 0, 1); /* Brighten the glow */
+        }
+
+        .button:active {
+            background-color: #cc6600;
+            box-shadow: 0px 5px 15px rgba(255, 140, 0, 0.5); /* Smaller shadow when clicked */
+            transform: translateY(5px); /* Button goes down slightly when clicked */
+        }
+
+        /* Optional: Add centered content */
+        .content-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script src="main.js"></script> <!-- Ensure this points to your game script -->
+</body>
+</html>
